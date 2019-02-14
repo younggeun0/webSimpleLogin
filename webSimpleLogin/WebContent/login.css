@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#loginDiv {
+	width:380px;
+	height:150px;
+	background-color:#F2F2F2;
+	margin:0px auto;
+}
+
+#loginDiv-content {
+	margin-left:20px;
+	padding-top:10px;
+}
+
+#keepLoginFont {
+	padding-bottom:5px;
+}
+
+.inputBox {
+	width:230px;
+	height:30px;
+	padding-left:10px;
+}
+
+.float-left {
+	float : left;
+}
+
+#loginBtn {
+	width:80px;
+	height:70px;
+	font-weight:bold;
+}
+
+.small-font {
+	font-size:13px;
+}
+
+a {
+	color: #595971;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

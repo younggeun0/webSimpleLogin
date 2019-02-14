@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="login.css"/>
+</head>
+<body>
+<div id="loginDiv">
+	<div id="loginDiv-content">
+		<form name="loginFrm">
+			<input type="checkbox" name="keepLogin"/><span  class="small-font">로그인 상태 유지</span>
+			<div class="float-left">
+				<input type="text" name="id" placeholder="아이디" class="inputBox"/><br/>
+				<input type="password" name="password" placeholder="비밀번호" class="inputBox"/>
+			</div>
+			<div class="float-left">
+				<input type="button" value="로그인" id="loginBtn" class="btn"/>
+			</div>
+			<div class="float-left">
+				<a href="http://localhost:8080/webSimpleLogin/sign_up.html" target="_blank">
+					<span class="small-font">회원가입</span>
+				</a>
+				<a href="">
+					<span class="small-font">아이디</span>
+				</a>·
+				<a href="">
+					<span class="small-font">비밀번호 찾기</span>
+				</a>
+				<a href="">
+					<img src="http://localhost:8080/webSimpleLogin/common/images/logo.png" alt="sist"/>
+					<span class="small-font">SIST 로그인</span>
+				</a>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
