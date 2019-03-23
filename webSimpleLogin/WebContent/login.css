@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 #loginDiv {
-	width:380px;
-	height:150px;
+	width:365px;
+	height:160px;
 	background-color:#F2F2F2;
 	margin:0px auto;
 }
@@ -10,6 +10,10 @@
 #loginDiv-content {
 	margin-left:20px;
 	padding-top:10px;
+}
+
+#loginHeader {
+	text-align:center;
 }
 
 #keepLoginFont {
@@ -28,7 +32,7 @@
 
 #loginBtn {
 	width:80px;
-	height:70px;
+	height:72px;
 	font-weight:bold;
 }
 
