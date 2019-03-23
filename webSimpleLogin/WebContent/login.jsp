@@ -9,8 +9,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript">
 	$(function() {
+		
+		// 아이디 저장여부 확인
+		var savedId = localStorage.getItem("saveId");
+		alert(savedId);
+		
+		if (savedId != null) { // localStorage에 아이디가 저장되어 있으면 
+			$("#id").val(savedId);
+			$("#saveId").prop("checked","checked");
+		}
+		
 		$("#loginBtn").click(function() {
-			
 			var id = $("#id").val();
 			
 			if (id == "") {
@@ -25,7 +34,19 @@
 				return;
 			}
 			
+			// 아이디 저장
+			if ($("#saveId").is(":checked") == true) {
+				localStorage.setItem("saveId",id);
+			}
+			
 			$("[name='loginFrm']").submit();
+		});
+		
+		$("#saveId").change(function() {
+			alert($("#saveId").is(":checked"));
+			if ($("#saveId").is(":checked") == false) {
+				localStorage.removeItem("saveId");
+			}
 		});
 	});
 </script>
@@ -45,7 +66,7 @@
 				<input type="button" value="로그인" id="loginBtn" class="btn"/>
 			</div>
 			<div class="float-left">
-				<input type="checkbox" name="keepLogin"/><span class="small-font">로그인 상태 유지</span>
+				<input type="checkbox" id="saveId" name="saveId"/><span class="small-font">아이디 저장</span>
 				<div>
 					<a href="http://localhost:8080/webSimpleLogin/sign_up.html" target="_blank">
 						<span class="small-font">회원가입</span>

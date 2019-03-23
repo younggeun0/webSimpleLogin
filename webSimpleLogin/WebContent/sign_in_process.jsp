@@ -5,6 +5,7 @@
 <jsp:setProperty name="lvo" property="*"/>
 
 <script type="text/javascript">
+
 <%
 	WslDAO w_dao = WslDAO.getInstance();
 
@@ -13,7 +14,6 @@
 		RequestDispatcher rd = request.getRequestDispatcher("sign_in_done.jsp");
 		session.setAttribute("login", true);
 		rd.forward(request, response);
-		
 	} else {
 	%>
 		alert("로그인에 실패했습니다.");
