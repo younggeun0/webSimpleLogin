@@ -2,9 +2,74 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>Simple Sign Up</title>
+<style type="text/css">
+	#wrap {
+		width:400px;
+		height:700px;
+		background-color:blue;
+		margin:0px auto;
+	}
+	
+	#signUpTab {
+		margin:0px auto;
+	}
+	
+	h2 {
+		text-align: center;
+	}
+	
+	span.warn {
+		color:red;
+	}
+</style>
 </head>
 <body>
-회원가입
+<div id="wrap">
+	<h2>회원가입</h2>
+	<table id="signUpTab">
+		<tr style="width:400px;">
+			<td style="width:120px"><label><span class="warn">*</span>&nbsp;아이디 </label></td>
+			<td colspan="2" ><input type="text" name="id" id="id"/></td>
+		</tr>
+		<tr>
+			<td><label><span class="warn">*</span>&nbsp;비밀번호 </label></td>
+			<td colspan="2"><input type="password" name="pass" id="pass1"/></td>
+		</tr>
+		<tr>
+			<td><label><span class="warn">*</span>&nbsp;비밀번호 확인 </label></td>
+			<td colspan="2"><input type="password" id="pass2"/></td>
+		</tr>
+		<tr>
+			<td><label><span class="warn">*</span>&nbsp;이름 </label></td>
+			<td colspan="2"><input type="text" name="name" id="name"/></td>
+		</tr>
+		<tr>
+			<td><label><span class="warn">*</span>&nbsp;연락처 </label></td>
+			<td colspan="2"><input type="text" name="tel" id="tel"/></td>
+		</tr>
+		<tr>
+			<td><label>&nbsp;&nbsp;우편번호</label></td>
+			<td width="50"><input type="text" name="zipcode" id="zipcode"/></td>
+			<td><input type="button" value="주소검색" id="btnSearchAddr"/></td>
+		</tr>
+		<tr>
+			<td><label>&nbsp;&nbsp;주소 </label></td>
+			<td colspan="2"><input type="text" name="addr1" id="addr1" readonly="readonly"/></td>
+		</tr>
+		<tr>
+			<td><label>&nbsp;&nbsp;상세주소</label></td>
+			<td colspan="2"><input type="text" name="addr2" id="addr2" readonly="readonly"/></td>
+		</tr>
+		<tr>
+			<td colspan="3"><input type="button" value="회원가입" onclick="signup()"/></td>
+		</tr>
+		<tr>
+			<td colspan="3"><input type="button" value="뒤로가기" onclick="history.back()"/></td>
+		</tr>
+	</table>
+	
+
+</div>
 </body>
 </html>
